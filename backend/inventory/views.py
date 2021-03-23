@@ -92,3 +92,5 @@ def get_pending_returns(request):
     equip = Equipment_issued.objects.filter(borrower=borrowern, isapproved=True)
     serializer = Equipment_issuedSerializer(equip, many=True)
     return JsonResponse({'Equipments To Be Returned': serializer.data}, safe=False, status=status.HTTP_200_OK)
+
+#added a line for test
